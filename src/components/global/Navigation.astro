@@ -9,7 +9,7 @@ import logo from '../../assets/armed logo.svg';
       class="relative flex flex-col w-full py-5 mx-auto bg-white md:items-center md:justify-between md:flex-row md:px-6">
       <div class="flex flex-row items-center justify-between lg:justify-start">
         <a href="/" class=" text-black inline-flex items-center gap-3">
-          <Image src={logo} alt="A bird sitting on a nest of eggs." />
+          <Image src={logo} class="h-8" alt="A bird sitting on a nest of eggs." />
         </a>
         <button
           @click="open = !open"
@@ -41,29 +41,33 @@ import logo from '../../assets/armed logo.svg';
         class="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-end md:flex-row">
         <a
           class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400 lg:ml-auto"
-          href="/#features">Features</a
+          href="/about">About</a
+        >
+        <a
+          class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400 lg:ml-auto"
+          href="/products">Products</a
         >
         <a
           class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400"
-          href="/#pricing">Pricing</a
+          href="/education">Education</a
         >
 
         <a
           class="px-2 lg:px-6 py-2 md:px-3 text-sm font-medium text-black hover:text-accent-400"
-          href="/faq">
-          Faq</a
+          href="/physicians">
+          Physicians</a
         >
 
         <div class="inline-flex items-center gap-2 list-none lg:ml-auto">
           <a
-            href="/signup"
+            href="/patients"
             class="block px-4 py-2 mt-2 text-sm font-medium text-black md:mt-0 hover:text-accent-400 focus:outline-none focus:shadow-outline">
-            Sign up
+            Patients
           </a>
           <a
-            href="/login"
+            href="/contact"
             class="inline-flex items-center h-8 justify-center px-4 py-2 text-sm font-medium text-black bg-gray-100 rounded-lg group focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 hover:bg-gray-50 active:bg-gray-200 active:text-accent-400 focus-visible:outline-black">
-            Log in
+            Contact
           </a>
         </div>
       </nav>

@@ -1,3 +1,9 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/armed logo.svg';
+import {Linkedin, Instagram, Facebook, Youtube} from 'lucide-astro'
+---
+
 <footer>
   <div
     class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-24">
@@ -5,32 +11,46 @@
       <a
         href="/"
         class="xl:col-span-1 text-black inline-flex items-center gap-3">
-        <svg
-          class="h-4"
-          viewBox="0 0 78 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M55.5 0H77.5L58.5 32H36.5L55.5 0Z"
-            class="ccustom"
-            fill="#283CFF"
-          ></path>
-          <path
-            d="M35.5 0H51.5L32.5 32H16.5L35.5 0Z"
-            class="ccompli1"
-            fill="#5263FF"
-          ></path>
-          <path
-            d="M19.5 0H31.5L12.5 32H0.5L19.5 0Z"
-            class="ccompli2"
-            fill="#808CFF"
-          ></path>
-        </svg>
-        <span class="font-bold font-display">AstroSaas</span>
+        <Image src={logo} alt="Armed logo">
       </a>
       <div
-        class="md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-8 text-sm text-gray-400 lg:col-span-3">
+        class="md:grid md:grid-cols-2 xl:grid-cols-3 md:gap-8 text-sm text-gray-400 lg:col-span-3">  
         <div>
+          <h3 class="text-lg text-black font-medium tracking-tight">Socials</h3>
+          <ul
+            role="list"
+            class="mt-4 space-y-1">
+            <li>
+              <a
+                href="https://www.linkedin.com/company/armed-inc/"
+                class="hover:text-black flex gap-2 items-center">
+                <Linkedin class="inline"/> LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/armed.kr"
+                class="hover:text-black flex gap-2 items-center">
+                <Instagram class="inline"/> Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/armed.kr"
+                class="hover:text-black flex gap-2 items-center">
+                <Youtube class="inline"/> YouTube
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/armed.kr?mibextid=LQQJ4d"
+                class="hover:text-black flex gap-2 items-center">
+                <Facebook class="inline"/> Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="mt-12 md:mt-0">
           <h3 class="text-lg text-black font-medium tracking-tight">
             All pages
           </h3>
@@ -46,113 +66,66 @@
             </li>
             <li>
               <a
-                href="/faq"
+                href="/about"
                 class="hover:text-black">
-                FAQ
+                About
               </a>
             </li>
             <li>
               <a
-                href="/terms"
+                href="/products"
                 class="hover:text-black">
-                Terms
+                Products
               </a>
             </li>
             <li>
               <a
-                href="/privacy"
+                href="/education"
                 class="hover:text-black">
-                Privacy
+                Education
               </a>
             </li>
             <li>
               <a
-                href="/signup"
+                href="/physicians"
                 class="hover:text-black">
-                Sign up
+                Physicians
               </a>
             </li>
             <li>
               <a
-                href="/signup"
+                href="/patients"
                 class="hover:text-black">
-                Sign In
+                Patients
               </a>
             </li>
-          </ul>
-        </div>
-        <div class="mt-12 md:mt-0">
-          <h3 class="text-lg text-black font-medium tracking-tight">
-            Resources
-          </h3>
-          <ul
-            role="list"
-            class="mt-4 space-y-1">
             <li>
               <a
-                href="https://github.com/michael-andreuzza/astrosaas"
+                href="/contact"
                 class="hover:text-black">
-                GitHub repo
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-lg text-black font-medium tracking-tight">
-            More themes
-          </h3>
-          <ul
-            role="list"
-            class="mt-4 space-y-1">
-            <li>
-              <a
-                href="https://lexingtonthemes.com/"
-                class="hover:text-black">
-                Lexington Themes
+                Contact
               </a>
             </li>
           </ul>
         </div>
         <div class="mt-12 md:mt-0">
-          <h3 class="text-lg text-black font-medium tracking-tight">Socials</h3>
+          <h3 class="text-lg text-black font-medium tracking-tight">Corporate Address</h3>
           <ul
             role="list"
-            class="mt-4 space-y-1">
+            class="mt-4 space-y-2">
             <li>
-              <a
-                href="https://x.com/lexingtonthemes"
-                class="hover:text-black">
-                @lexingtonthemes
+              <a class="hover:text-black" href="https://goo.gl/maps/HbhFe4XCTHxuxcEK7">
+                <strong>HQ Office:</strong> 6th floor, 43 Daeji-ro, Suji-gu, Yongin-si, Gyeonggi-do, South Korea 16872
               </a>
             </li>
             <li>
-              <a
-                href="https://x.com/Mike_Andreuzza"
-                class="hover:text-black">
-                @Mike_Andreuzza
+              <a class="hover:text-black" href="https://goo.gl/maps/yVcCWNmF5K6hu5f68">
+                <strong>EU Office:</strong> Aaltje Noordewierstraat 337, Den Haag, Netherlands, Post Code: 2551SH
               </a>
             </li>
           </ul>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
-<footer class="bg-white">
-  <div
-    class="mx-auto w-full lg:px-24 max-w-7xl md:px-12 items-center px-8 py-6">
-    <div class="border-t pt-6 border-gray-200">
-      <p class="text-sm text-neutral-600 lg:col-span-2">
-        © 2024 Lexington Themes. All rights reserved. Lexington Themes is not
-        affiliated with Astro or Tailwind Labs team, nor is it endorsed by or
-        sponsored by this ones. A side project by <a
-          class="text-sm text-black hover:text-accent-400 underline"
-          href="https://michaelandreuzza.com/"
-          >Michael Andreuzza</a
-        > This website was built with Astro &amp; Tailwind. Crafted in Åland Islands,
-        Finland.
-      </p>
     </div>
   </div>
 </footer>
