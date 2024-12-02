@@ -1,13 +1,7 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
 import "@/styles/globals.css";
 import SiteHeader from "@/components/header";
 import SiteFooter from "@/components/footer";
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,9 +19,7 @@ export default function RootLayout({
       className="scroll-smooth selection:bg-accent-500 selection:text-white no-touchevents hydrated"
       suppressHydrationWarning
     >
-      <body
-        className={`${fontSans.variable} antialiased font-sans bg-white flex flex-col min-h-svh`}
-      >
+      <body className={`font-sans bg-white flex flex-col min-h-svh`}>
         <SiteHeader />
         <main className="grow">{children}</main>
         <SiteFooter />
