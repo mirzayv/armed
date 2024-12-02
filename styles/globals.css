@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --color-black: #121212;
+  --color-blue-50: #ebedff;
+  --color-accent-50: #ebedff;
+  --color-accent-100: #d6daff;
+  --color-accent-200: #a8b1ff;
+  --color-accent-300: #808cff;
+  --color-accent-400: #5263ff;
+  --color-accent-500: #283cff;
+  --color-accent-600: #0017eb;
+  --color-accent-700: #0012b3;
+  --color-accent-800: #000c75;
+  --color-accent-900: #00063d;
+}
+
+/*  */

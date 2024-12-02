@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import { Inter as FontSans } from "next/font/google";
+import "@/styles/globals.css";
+import SiteHeader from "@/components/header";
+import SiteFooter from "@/components/footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -24,11 +20,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="scroll-smooth selection:bg-accent-500 selection:text-white no-touchevents hydrated"
+      suppressHydrationWarning
+    >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${fontSans.variable} antialiased font-sans bg-white flex flex-col min-h-svh`}
       >
-        {children}
+        <SiteHeader />
+        <main className="grow">{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );
